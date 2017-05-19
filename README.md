@@ -28,3 +28,5 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+https://medium.com/codingthesmartway-com-blog/vue-js-2-firebase-e4b2479e35a8
