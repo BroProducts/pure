@@ -1,5 +1,5 @@
 <template>
-  <div class="text-field">
+  <div class="TextField">
     <input type="text" />
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 const value = value || ''
 export default {
-  name: 'text-field',
+  name: 'TextField',
   data () {
     return {
       value: value

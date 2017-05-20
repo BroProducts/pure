@@ -1,0 +1,8 @@
+<section class="todos">
+  <h1>todos Component</h1>
+  <div v-for="todo in todos">
+    <div>{{ todo.title }} <span style="cursor: pointer" @click="removeTodo(todo)">X</span></div>
+  </div>
+  <input type="text" v-model="newTodo.title" />
+  <button @click="addTodo">Add Todo</button>
+</section>

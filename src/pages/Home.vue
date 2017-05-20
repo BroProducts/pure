@@ -60,20 +60,11 @@
 </template>
 
 <script>
-import Firebase from 'firebase'
+import { db } from '@/helpers/firebaseConfig.js'
 
-const config = {
-  apiKey: 'AIzaSyDFHGGSjrSzeyPEfGIMGg6JGDY0EV8ZbGI',
-  authDomain: 'pure-83e27.firebaseapp.com',
-  databaseURL: 'https://pure-83e27.firebaseio.com',
-  projectId: 'pure-83e27',
-  storageBucket: 'pure-83e27.appspot.com',
-  messagingSenderId: '476647766797'
-}
-
-const app = Firebase.initializeApp(config)
-const db = app.database()
 const booksRef = db.ref('books')
+
+console.log(db)
 
 export default {
   name: 'home',
