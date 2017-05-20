@@ -1,3 +1,4 @@
+import { mapGetters } from 'vuex'
 import { db } from '@/helpers/firebaseConfig.js'
 
 const todosRef = db.ref('todos')
@@ -8,26 +9,26 @@ export default {
   firebase: {
     todos: todosRef
   },
-  mounted () {
-
-  },
-  data () {
-    return {
-      newTodo: {
-        title: ''
-      }
-    }
-  },
   methods: {
     addTodo: function () {
-      todosRef.push(this.newTodo)
-      this.newTodo.title = ''
+      // this.$store.commit({
+      //  type: 'addTodo',
+      //  newTodo: this.newTodo
+      // })
+      this.$store.dispatch('addTodo', {
+        newTodo: this.newTodo
+      })
+      // todosRef.push(this.newTodo)
+      // this.newTodo.title = ''
     },
-    removeTodo: function (book) {
-      todosRef.child(book['.key']).remove()
+    removeTodo: function (todo) {
+      this.$store.commit('removeTodo', {
+        todo
+      })
+      // todosRef.child(book['.key']).remove()
     }
   },
   computed: {
-
+    ...mapGetters(['allTodos', 'newTodo'])
   }
 }
