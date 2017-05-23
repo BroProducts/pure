@@ -1,5 +1,5 @@
 import { mapGetters } from 'vuex'
-import { db } from '@/helpers/firebaseConfig.js'
+import { db } from '@/helpers/firebase.config.js'
 
 const todosRef = db.ref('todos')
 

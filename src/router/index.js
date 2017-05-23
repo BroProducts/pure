@@ -1,21 +1,31 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/Home'
-import Todos from '@/pages/Todos/index'
+
+// Pages
+import home from '@/pages/home/index'
+import todos from '@/pages/todos/index'
+import testFire from '@/pages/testFire/index'
 
 Vue.use(Router)
 
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: home
+  },
+  {
+    path: '/todos',
+    name: 'todos',
+    component: todos
+  },
+  {
+    path: '/testFire',
+    name: 'testFire',
+    component: testFire
+  }
+]
+
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/todos',
-      name: 'Todos',
-      component: Todos
-    }
-  ]
+  routes
 })
