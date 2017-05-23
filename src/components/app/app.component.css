@@ -1,7 +1,6 @@
 html {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   display: block;
 }
 
@@ -12,14 +11,19 @@ body {
   text-align: center;
   color: #2c3e50;
   margin: 0;
-  height: 100%;
   width: 100%;
+  overflow: auto;
   display: block;
 }
 
-.app {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+*, body {
+    box-sizing: border-box;
+}
+
+ #app {
   display: block;
+}
+
+.page {
+  padding-top: 70px;
 }
